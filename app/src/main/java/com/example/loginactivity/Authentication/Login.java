@@ -158,17 +158,28 @@ public class Login extends AppCompatActivity {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 Log.d("TAG", "OnSuccess: "+ documentSnapshot.getData());
 
+               if(documentSnapshot.getString("isUser")!= null){
+                    startActivity(new Intent(Login.this, NavigationDrawer.class));
+                    Toast.makeText(Login.this, "Login as customer", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+            }
+        });
+
+        DocumentReference df1 = fstore.collection("producerAuthentications").document(uid);
+        //Extract data from firestore
+        df1.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                Log.d("TAG", "OnSuccess: "+ documentSnapshot.getData());
+
                 //identify the user access level
                 if(documentSnapshot.getString("isAdmin")!= null){
 //                    startActivity(new Intent(Login.this, ProducerModernDashboard.class));
                     Toast.makeText(Login.this, "Login as admin", Toast.LENGTH_SHORT).show();
                     finish();
                 }
-                else if(documentSnapshot.getString("isUser")!= null){
-                    startActivity(new Intent(Login.this, NavigationDrawer.class));
-                    Toast.makeText(Login.this, "Login as customer", Toast.LENGTH_SHORT).show();
-                    finish();
-                }
+
             }
         });
 
@@ -178,17 +189,11 @@ public class Login extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if(FirebaseAuth.getInstance().getCurrentUser() != null){
-            DocumentReference df = FirebaseFirestore.getInstance().collection("Users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
+            DocumentReference df = FirebaseFirestore.getInstance().collection("userAuthentication").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
             df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                 @Override
                 public void onSuccess(DocumentSnapshot documentSnapshot) {
 
-                    if(documentSnapshot.getString("isAdmin")!=null){
-//                        startActivity(new Intent(getApplicationContext(), ProducerModernDashboard.class));
-                        Toast.makeText(Login.this, "Login as admin", Toast.LENGTH_SHORT).show();
-
-                        finish();
-                    }
                     if(documentSnapshot.getString("isUser")!=null){
                         startActivity(new Intent(getApplicationContext(), NavigationDrawer.class));
                         Toast.makeText(Login.this, "Login as customer", Toast.LENGTH_SHORT).show();
@@ -206,6 +211,33 @@ public class Login extends AppCompatActivity {
                     finish();
                 }
             });
+
+
+            DocumentReference df1 = FirebaseFirestore.getInstance().collection("producerAuthentications").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
+            df1.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                @Override
+                public void onSuccess(DocumentSnapshot documentSnapshot) {
+
+                    if(documentSnapshot.getString("isAdmin")!=null){
+//                        startActivity(new Intent(getApplicationContext(), ProducerModernDashboard.class));
+                        Toast.makeText(Login.this, "Login as admin", Toast.LENGTH_SHORT).show();
+
+                        finish();
+                    }
+
+
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    FirebaseAuth.getInstance().signOut();
+                    startActivity(new Intent(getApplicationContext(), Login.class));
+                    finish();
+                }
+            });
+
+
+
         }
 
     }
