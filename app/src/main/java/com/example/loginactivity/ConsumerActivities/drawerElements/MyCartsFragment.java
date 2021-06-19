@@ -12,6 +12,7 @@ import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,7 +41,8 @@ public class MyCartsFragment extends Fragment {
     RecyclerView recyclerView;
     MyCartAdapter cartAdapter;
     List<MyCartModel> cartModelList;
-    int totalPrice=0;
+
+    Button refresh;
 
     View layout1;
     View layout2;
@@ -55,6 +57,7 @@ public class MyCartsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_my_carts, container, false);
 
@@ -65,8 +68,10 @@ public class MyCartsFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         layout1 = root.findViewById(R.id.constraint1);
+        refresh = root.findViewById(R.id.refresh);
         layout2 = root.findViewById(R.id.constraint2);
         layout2.setVisibility(View.GONE);
+
 
         cartModelList = new ArrayList<>();
         cartAdapter = new MyCartAdapter(getActivity(), cartModelList);
@@ -78,6 +83,7 @@ public class MyCartsFragment extends Fragment {
             @Override
             public void onComplete(@NonNull @NotNull Task<QuerySnapshot> task) {
 
+                int totalPrice=0;
                 for (DocumentSnapshot documentSnapshot: task.getResult().getDocuments()){
 
                     MyCartModel cartModel = documentSnapshot.toObject(MyCartModel.class);
@@ -98,10 +104,12 @@ public class MyCartsFragment extends Fragment {
             }
         });
 
-
-
-
-
+        refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager().beginTransaction().detach(MyCartsFragment.this).attach(MyCartsFragment.this).commit();
+            }
+        });
 
         return root;
     }
