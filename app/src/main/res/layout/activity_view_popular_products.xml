@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ConsumerActivities.ViewPopularProducts">
 
 
@@ -11,11 +12,12 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#DFFFD1"
+        android:background="@color/status"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="@string/popular_products"
+        app:titleTextColor="@color/white"
         tools:ignore="MissingConstraints" />
 
     <androidx.recyclerview.widget.RecyclerView

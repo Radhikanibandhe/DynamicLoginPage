@@ -11,6 +11,7 @@ import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -163,7 +164,7 @@ public class Register extends AppCompatActivity {
                         userInfo.put("Address", address);
                         userInfo.put("PhoneNumber", phone);
                         userInfo.put("UserEmail", email);
-                        userInfo.put("imageUrl", "");
+                        userInfo.put("imageUrl", "https://firebasestorage.googleapis.com/v0/b/loginactivity-ace62.appspot.com/o/imageUrl%2Fuser.png?alt=media&token=bce251f4-cbd8-4713-871c-53746ce1724c");
                         userInfo.put("isUser", "0");
 
 

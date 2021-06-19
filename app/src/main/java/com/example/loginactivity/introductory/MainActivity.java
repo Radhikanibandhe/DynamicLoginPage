@@ -46,35 +46,36 @@ public class MainActivity extends AppCompatActivity {
             public void onAnimationStart(Animator animation) {
 
 
-                if(mAuth.getCurrentUser()!= null){
+                if (mAuth.getCurrentUser() != null) {
                     Toast.makeText(MainActivity.this, "Please wait you are already Login!", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(), NavigationDrawer.class));
                     finish();
                 }
 
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                final PaperOnboardingFragment paperOnboardingFragment = PaperOnboardingFragment.newInstance(getDataForOnboarding());
+                //FragmentManager fragmentManager = getSupportFragmentManager();
+                //final PaperOnboardingFragment paperOnboardingFragment = PaperOnboardingFragment.newInstance(getDataForOnboarding());
 
 
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.add(R.id.fragment_manager,paperOnboardingFragment);
-                fragmentTransaction.commit();
+                //FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                //fragmentTransaction.add(R.id.fragment_manager,paperOnboardingFragment);
+                //fragmentTransaction.commit();
 
                 //Adding right swap action listener to redirect on Login page
-                paperOnboardingFragment.setOnRightOutListener(new PaperOnboardingOnRightOutListener() {
-                    @Override
-                    public void onRightOut() {
-                        startActivity(new Intent(getApplicationContext(), Login.class));
-                        finish();
-                    }
-                });
+                //paperOnboardingFragment.setOnRightOutListener(new PaperOnboardingOnRightOutListener() {
+                //@Override
+                //public void onRightOut() {
+                //startActivity(new Intent(getApplicationContext(), Login.class));
+                //finish();
+                //}
+                //});
 
 
             }
 
             @Override
             public void onAnimationEnd(Animator animation) {
-
+                    startActivity(new Intent(getApplicationContext(), Login.class));
+                    finish();
             }
 
             @Override
@@ -89,27 +90,28 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-    private ArrayList<PaperOnboardingPage> getDataForOnboarding() {
-
-        PaperOnboardingPage src1 = new PaperOnboardingPage("Fresh Food","Get best quality food everyday",
-                Color.parseColor("#FFBB86FC"),R.drawable.restaurant,R.drawable.dish);
-
-        PaperOnboardingPage src2 = new PaperOnboardingPage("Fast Delivery","Get fast delivery at your doorstep",
-                Color.parseColor("#FFB6C1"),R.drawable.delivery,R.drawable.fast);
-
-        PaperOnboardingPage src3 = new PaperOnboardingPage("Easy Payment","Get Payment done as fast as Cheetah",
-                Color.parseColor("#87ceeb"),R.drawable.payment,R.drawable.card);
-
-        ArrayList <PaperOnboardingPage> elements = new ArrayList<>();
-        elements.add(src1);
-        elements.add(src2);
-        elements.add(src3);
-        return elements;
-
-
-
-    }
 }
+
+//    private ArrayList<PaperOnboardingPage> getDataForOnboarding() {
+//
+ //       PaperOnboardingPage src1 = new PaperOnboardingPage("Fresh Food","Get best quality food everyday",
+   //             Color.parseColor("#87ceeb"),R.drawable.restaurant,R.drawable.dish);
+//
+  //      PaperOnboardingPage src2 = new PaperOnboardingPage("Fast Delivery","Get fast delivery at your doorstep",
+    //            Color.parseColor("#87ceeb"),R.drawable.delivery,R.drawable.fast);
+//
+  //      PaperOnboardingPage src3 = new PaperOnboardingPage("Easy Payment","Get Payment done as fast as Cheetah",
+    //            Color.parseColor("#87ceeb"),R.drawable.payment,R.drawable.card);
+//
+  //      ArrayList <PaperOnboardingPage> elements = new ArrayList<>();
+    //    elements.add(src1);
+      //  elements.add(src2);
+        //elements.add(src3);
+        //return elements;
+
+
+
+    //}
+//}
 
 //ifsc acount pan addhar other

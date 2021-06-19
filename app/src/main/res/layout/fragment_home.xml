@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F3F1F1"
+    android:background="@color/white"
     tools:context=".ConsumerActivities.ui.home.HomeFragment">
 
 
@@ -32,6 +32,7 @@
         android:singleLine="true"
         android:hint="@string/search_your_item_here"
         android:drawableLeft="@drawable/ic_baseline_search_24"
+        android:drawableTint="@color/black"
         android:drawablePadding="10dp"
         android:padding="10dp"
         android:background="@drawable/search_bg"
@@ -41,19 +42,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="2"
-        android:orientation="horizontal"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
       <TextView
           android:layout_width="0dp"
           android:layout_height="wrap_content"
-          android:text="@string/popular_products"
           android:layout_weight="1"
-          android:textSize="18sp"
-          android:textStyle="bold"
-          android:fontFamily="@font/roboto_slab"/>
+          android:fontFamily="@font/roboto_slab"
+          android:text="@string/popular_products"
+          android:textColor="@color/black"
+          android:textSize="18dp"
+          android:textStyle="bold" />
 
       <TextView
           android:id="@+id/view_all_products"
@@ -61,16 +63,16 @@
           android:layout_height="wrap_content"
           android:text="@string/view_all"
           android:layout_weight="1"
-          android:textSize="16sp"
+          android:textSize="12sp"
           android:gravity="end"
           android:layout_marginRight="7dp"
-          android:textColor="#87CEEB"
+          android:textColor="@color/black"
           android:textStyle="bold"
           android:fontFamily="@font/roboto_slab"
           tools:ignore="InvalidId"
           android:layout_marginEnd="7dp" />
-
     </LinearLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
@@ -94,6 +96,7 @@
           android:layout_weight="1"
           android:textSize="18sp"
           android:textStyle="bold"
+          android:textColor="@color/black"
           android:fontFamily="@font/roboto_slab"/>
 
       <TextView
@@ -102,10 +105,10 @@
           android:layout_height="wrap_content"
           android:text="@string/view_all"
           android:layout_weight="1"
-          android:textSize="16sp"
+          android:textSize="12sp"
           android:gravity="end"
           android:layout_marginRight="7dp"
-          android:textColor="#87CEEB"
+          android:textColor="@color/black"
           android:textStyle="bold"
           android:fontFamily="@font/roboto_slab"
           tools:ignore="InvalidId"
@@ -134,6 +137,7 @@
           android:layout_height="wrap_content"
           android:layout_weight="1"
           android:fontFamily="@font/roboto_slab"
+          android:textColor="@color/black"
           android:text="@string/recommended"
           android:textSize="18sp"
           android:textStyle="bold" />
@@ -144,17 +148,17 @@
           android:layout_height="wrap_content"
           android:text="@string/view_all"
           android:layout_weight="1"
-          android:textSize="16sp"
+          android:textSize="12sp"
           android:gravity="end"
           android:layout_marginRight="7dp"
-          android:textColor="#87CEEB"
+          android:textColor="@color/black"
           android:textStyle="bold"
           android:fontFamily="@font/roboto_slab"
           tools:ignore="InvalidId"
           android:layout_marginEnd="7dp" />
-
-
     </LinearLayout>
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

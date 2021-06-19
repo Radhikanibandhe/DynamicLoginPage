@@ -225,7 +225,7 @@
     android:onClick="getLocation"
     android:layout_marginLeft="35dp"
     android:layout_marginTop="40dp"
-/>
+    app:tint="#FF0B55" />
         <EditText
             android:id="@+id/pancardID"
             android:layout_width="match_parent"

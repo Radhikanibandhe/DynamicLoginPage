@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FoodAPP</string>
+    <string name="app_name">FoodApp</string>
     <string name="title_activity_consumer_dashboard">ConsumerDashboardActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -32,4 +32,7 @@
     <string name="products">Products</string>
     <string name="product_details">Product Details</string>
     <string name="description">description</string>
+    <string name="updateProfile">Update</string>
+    <string name="logout">LogOut</string>
+    <string name="updateProfileData">Profile Updated</string>
 </resources>

@@ -9,14 +9,14 @@
     >
 
     <LinearLayout
-        android:background="#DFFFD1"
+        android:background="#FAF1E6"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/cat_nav_img"
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:layout_height="150dp"
             android:padding="15dp"
             android:background="@drawable/border"
@@ -26,7 +26,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="1dp"
+            android:background="@drawable/border"
             android:orientation="vertical">
 
             <TextView
@@ -34,6 +35,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/roboto_slab"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
@@ -44,6 +47,9 @@
                 android:layout_height="wrap_content"
                 android:text="Description is here"
                 android:maxLines="2"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/Gray"
+                android:fontFamily="@font/roboto_slab"
                 android:textSize="19sp"
                 />
 
@@ -53,9 +59,12 @@
                 android:layout_height="wrap_content"
                 android:text="Discount 20% off"
                 android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/roboto_slab"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="#07DF1C"/>
+                android:textColor="@color/Black"
+                />
 
 
 
@@ -66,12 +75,9 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="5dp"
-                />
+                app:tint="@color/Black" />
 
         </LinearLayout>
-
-
-
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>
+

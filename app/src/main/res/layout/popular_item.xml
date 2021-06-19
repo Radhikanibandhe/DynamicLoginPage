@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="10dp"
     app:cardCornerRadius="10dp">
@@ -26,8 +27,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/popular_products"
-            android:textSize="19sp"
+            android:textSize="20sp"
             android:textStyle="bold"
+            android:textColor="@color/black"
             android:fontFamily="@font/roboto_slab"/>
 
         <TextView
@@ -36,6 +38,9 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="2"
+            android:textColor="@color/Gray"
+            android:fontFamily="@font/roboto_slab"
+            android:textSize="15sp"
             android:text="Description"/>
 
 
@@ -59,6 +64,7 @@
                 android:layout_marginTop="3dp"
                 android:text="5.0"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:fontFamily="@font/roboto_slab"/>
 
             <TextView
@@ -68,9 +74,10 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginRight="10dp"
                 android:text="Discount 20% Off"
-                android:textColor="#87CEEB"
+                android:textColor="@color/Black"
                 android:textStyle="bold"
                 android:gravity="end"
+                android:textSize="12sp"
                 android:fontFamily="@font/roboto_slab"
                 />
         </LinearLayout>

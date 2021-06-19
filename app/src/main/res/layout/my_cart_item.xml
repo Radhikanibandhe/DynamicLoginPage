@@ -5,25 +5,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="5dp"
     android:elevation="5dp"
+    android:background="@color/white"
     app:cardCornerRadius="7dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#B3FB9F"
+        android:background="@drawable/border"
         android:padding="8dp">
 
         <ImageView
             android:id="@+id/product_img"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/restaurant"/>
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/restaurant"
+            android:layout_gravity="center"
+            />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="left"
             android:orientation="vertical"
             android:weightSum="2"
             android:layout_marginLeft="10dp"
@@ -36,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Product Name"
-                android:textColor="@color/Green"
+                android:textColor="@color/black"
                 android:padding="5dp"
                 android:textStyle="bold"
                 android:textSize="20sp"
@@ -51,6 +54,7 @@
                 android:padding="5dp"
                 android:textStyle="bold"
                 android:textSize="16sp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/roboto_slab"/>
 
             <TextView
@@ -62,6 +66,7 @@
                 android:padding="5dp"
                 android:textStyle="bold"
                 android:textSize="16sp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/roboto_slab"/>
 
 
@@ -76,31 +81,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Product totalPrice"
+                    android:text="Product Total Price"
                     android:padding="5dp"
                     android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     android:fontFamily="@font/roboto_slab"/>
 
                 <ImageView
                     android:id="@+id/delete_current_product"
-                    android:layout_width="35dp"
+                    android:layout_width="40dp"
                     android:layout_height="35dp"
                     android:layout_margin="5dp"
-                    android:layout_marginLeft="15dp"
                     android:src="@drawable/ic_baseline_delete_24"
-                    />
+                    app:tint="@color/black" />
             </LinearLayout>
-
-
-
         </LinearLayout>
 
 
+</LinearLayout>
 
 
 
 
-    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

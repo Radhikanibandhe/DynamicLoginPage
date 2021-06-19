@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F3F1F1"
+    android:background="@color/white"
     tools:context=".ConsumerActivities.DetailedActivity">
 
 
@@ -12,11 +12,12 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/SkyBlue"
+        android:background="#F85C70"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="@string/product_details"
+        app:titleTextColor="@color/white"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -36,6 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
+        android:textColor="@color/black"
         android:textSize="25sp"
         android:layout_marginLeft="10dp"
         android:textStyle="bold"
@@ -48,8 +50,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Price : 30"
-        android:textColor="@color/DeepSkyBlue"
-        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginLeft="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,10 +86,11 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:fontFamily="@font/roboto_slab"
         android:text="Description"
-        android:textColor="@color/SkyBlue"
-        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,6 +103,7 @@
         android:layout_margin="8dp"
         android:text="@string/description"
         android:textAlignment="center"
+        android:textColor="@color/Gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
@@ -109,8 +113,8 @@
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:background="#C5FDAD"
+        android:layout_height="50dp"
+        android:background="#F6DFEB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -118,12 +122,14 @@
     <ImageView
         android:id="@+id/add_item"
         android:elevation="3dp"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
         android:src="@drawable/ic_baseline_add_circle_outline_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout"
+        app:tint="@color/black" />
 
     <TextView
         android:id="@+id/detailed_quantity"
@@ -133,6 +139,7 @@
         android:text="1"
         android:textSize="32sp"
         android:textStyle="bold"
+        android:layout_marginLeft="5dp"
         android:layout_margin="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/add_item"
@@ -140,19 +147,23 @@
 
     <ImageView
         android:id="@+id/remove_item"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:elevation="3dp"
+        android:layout_marginRight="5dp"
         android:src="@drawable/ic_baseline_remove_circle_outline_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/detailed_quantity"
-        app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout"
+        app:tint="@color/black" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/add_to_cart"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:text="Add To Cart"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_slab"
         android:elevation="3dp"
         android:background="@drawable/btn_bg_detailed"
         android:layout_marginRight="10dp"
