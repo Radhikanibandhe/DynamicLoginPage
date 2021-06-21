@@ -56,12 +56,12 @@ public class Register extends AppCompatActivity {
 
     FirebaseAuth mAuth;
     FirebaseFirestore mStore;
-    ImageButton imageButton;
     ProgressBar progressBar;
 
     FusedLocationProviderClient fusedLocationProviderClient;
 
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,7 +75,6 @@ public class Register extends AppCompatActivity {
         passwordEdit = findViewById(R.id.passwrod_register);
         cityEdit = findViewById(R.id.cityRegister);
         stateEdit = findViewById(R.id.stateRegister);
-        imageButton = findViewById(R.id.imageButton);
         progressBar = findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
 
