@@ -35,4 +35,6 @@
     <string name="updateProfile">Update</string>
     <string name="logout">LogOut</string>
     <string name="updateProfileData">Profile Updated</string>
+    <string name="register_as_vendor">Register as Vendor</string>
+    <string name="register_as_customer">Register as Customer</string>
 </resources>

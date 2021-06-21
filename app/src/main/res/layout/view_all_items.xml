@@ -25,7 +25,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="1dp"
+            android:layout_marginLeft="5dp"
             android:background="@drawable/border"
             android:orientation="vertical">
 
@@ -34,6 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name"
+                android:paddingLeft="10dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/roboto_slab"
@@ -44,6 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Description is here"
+                android:paddingLeft="10dp"
                 android:textColor="@color/Gray"
                 android:fontFamily="@font/roboto_slab"
                 android:maxLines="2"
@@ -58,6 +60,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Price: ₹"
+                    android:paddingLeft="10dp"
                     android:layout_marginTop="5dp"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -68,6 +71,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="18"
+                    android:paddingLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="0dp"
                     android:textSize="20sp"

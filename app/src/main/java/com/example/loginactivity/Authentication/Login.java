@@ -30,7 +30,7 @@ import org.jetbrains.annotations.NotNull;
 public class Login extends AppCompatActivity {
 
     Button login;
-    TextView textView, forgetPass;
+    TextView textView, forgetPass, producerlink;
     EditText gmail_field, pass_field;
     String gmail_login, pass_login;
     private FirebaseAuth mAuth;
@@ -44,6 +44,7 @@ public class Login extends AppCompatActivity {
 
         login = findViewById(R.id.login_btn);
         textView = findViewById(R.id.link);
+        producerlink = findViewById(R.id.producerlink);
         gmail_field = findViewById(R.id.email);
         pass_field = findViewById(R.id.password);
         forgetPass = findViewById(R.id.forgot_password);
@@ -144,6 +145,13 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), Register.class));
                 //finish();
+            }
+        });
+
+        producerlink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ProducerRegistration.class));
             }
         });
 
