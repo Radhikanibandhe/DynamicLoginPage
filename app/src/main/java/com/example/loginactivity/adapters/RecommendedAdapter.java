@@ -42,7 +42,6 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
         holder.name.setText(list.get(position).getName());
         holder.description.setText(list.get(position).getDescription());
         holder.rating.setText(list.get(position).getRating());
-        holder.price.setText(list.get(position).getPrice());
 
     }
 
@@ -54,7 +53,7 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView imageView;
-        TextView name, description, rating , price;
+        TextView name, description, rating;
 
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
@@ -62,7 +61,6 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
             imageView = itemView.findViewById(R.id.rec_img);
             name = itemView.findViewById(R.id.rec_name);
             description = itemView.findViewById(R.id.rec_dec);
-            price = itemView.findViewById(R.id.rec_price);
             rating = itemView.findViewById(R.id.rec_rating);
 
 

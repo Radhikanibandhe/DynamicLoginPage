@@ -74,8 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animator animation) {
-                    startActivity(new Intent(getApplicationContext(), Login.class));
-                    finish();
+
             }
 
             @Override
@@ -95,13 +94,13 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<PaperOnboardingPage> getDataForOnboarding() {
 
         PaperOnboardingPage src1 = new PaperOnboardingPage("Fresh Food","Get best quality food everyday",
-                Color.parseColor("#87ceeb"),R.drawable.restaurant,R.drawable.dish);
+                Color.parseColor("#F85C70"),R.drawable.restaurant,R.drawable.dish);
 
         PaperOnboardingPage src2 = new PaperOnboardingPage("Fast Delivery","Get fast delivery at your doorstep",
-                Color.parseColor("#87ceeb"),R.drawable.delivery,R.drawable.fast);
+                Color.parseColor("#F85C70"),R.drawable.delivery,R.drawable.fast);
 
         PaperOnboardingPage src3 = new PaperOnboardingPage("Easy Payment","Get Payment done as fast as Cheetah",
-                Color.parseColor("#87ceeb"),R.drawable.payment,R.drawable.card);
+                Color.parseColor("#F85C70"),R.drawable.payment,R.drawable.card);
 
         ArrayList <PaperOnboardingPage> elements = new ArrayList<>();
         elements.add(src1);
