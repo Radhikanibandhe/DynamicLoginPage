@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginActivity">
-        <activity android:name=".ConsumerActivities.ui.profile.UpdateProfile"></activity>
+        <activity android:name=".introductory.OnBoadingScreen"></activity>
+        <activity android:name=".ConsumerActivities.ui.profile.UpdateProfile" />
         <activity android:name=".ConsumerActivities.DetailedActivity" />
         <activity android:name=".ConsumerActivities.AllProducts" />
         <activity android:name=".ConsumerActivities.ViewPopularProducts" />

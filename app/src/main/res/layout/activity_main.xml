@@ -39,12 +39,6 @@
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/food" />
 
-    <FrameLayout
-        android:id="@+id/fragment_manager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-         />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

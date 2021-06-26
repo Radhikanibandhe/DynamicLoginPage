@@ -16,6 +16,8 @@
     <string name="title_activity_navigation_consumer">NavigationConsumerActivity</string>
     <string name="profile">Profile</string>
     <string name="category">Category</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="offers">Offers</string>
@@ -37,4 +39,19 @@
     <string name="updateProfileData">Profile Updated</string>
     <string name="register_as_vendor">Register as Vendor</string>
     <string name="register_as_customer">Register as Customer</string>
+
+    <!-- Onboarding animation strings -->
+    <string name="first_slide_title">Fresh Food Everyday!!</string>
+    <string name="sec_slide_title">Get Fast Delivery!!</string>
+    <string name="third_slide_title">Fast and Secure Payment!!</string>
+
+    <string name="first_desc">Get best quality food everyday</string>
+    <string name="sec_desc">Get fast delivery at your doorstep</string>
+    <string name="third_desc">Get Payment done as fast as Cheetah</string>
+
+    <string name="skip_btn">Skip </string>
+    <string name="next_btn">Next</string>
+    <string name="get_started">Lets get Started!!</string>
+
+
 </resources>

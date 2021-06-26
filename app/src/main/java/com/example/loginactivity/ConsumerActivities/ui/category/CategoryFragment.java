@@ -12,15 +12,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.loginactivity.R;
-import com.example.loginactivity.adapters.NavCategoryAdapter;
-import com.example.loginactivity.adapters.PopularAdapters;
-import com.example.loginactivity.models.NavCategoryModel;
-import com.example.loginactivity.models.PopularModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.example.loginactivity.adapters.NavCategoryAdapter;
+import com.example.loginactivity.models.NavCategoryModel;
 
 import java.util.ArrayList;
 import java.util.List;

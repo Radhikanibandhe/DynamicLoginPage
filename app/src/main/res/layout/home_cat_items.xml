@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FABEC0"
+        android:background="#0E86D4"
         android:elevation="5dp"
         android:gravity="center_horizontal"
         android:orientation="vertical">
@@ -22,7 +22,7 @@
             android:layout_marginTop="10dp"
             android:src="@drawable/restaurant"
             app:tint="@color/white" />
-        
+
         <TextView
             android:id="@+id/cat_home_name"
             android:layout_width="65dp"

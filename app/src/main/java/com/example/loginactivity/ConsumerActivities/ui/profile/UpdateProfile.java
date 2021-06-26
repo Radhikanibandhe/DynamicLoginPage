@@ -137,6 +137,7 @@ public class UpdateProfile extends AppCompatActivity {
                 }
 
                 uploadImage();
+                finish();
             }
         });
 

@@ -12,13 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="10dp">
 
-        <ImageView
+        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/rec_img"
             android:layout_width="150dp"
             android:scaleType="centerCrop"
             android:layout_height="150dp"
+            app:riv_corner_radius="15dp"
             android:src="@drawable/restaurant"/>
 
         <TextView
