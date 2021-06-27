@@ -44,8 +44,8 @@
                 android:layout_weight="1"
                 android:text="Product Name"
                 android:textColor="@color/black"
-                android:padding="5dp"
                 android:textStyle="bold"
+                android:padding="5dp"
                 android:textSize="20sp"
                 android:fontFamily="@font/roboto_slab"/>
 
@@ -56,10 +56,9 @@
                 android:layout_weight="1"
                 android:text="Product Price"
                 android:padding="5dp"
-                android:textStyle="bold"
-                android:textSize="16sp"
+                android:textSize="15sp"
                 android:textColor="@color/black"
-                android:fontFamily="@font/roboto_slab"/>
+                android:fontFamily="@font/open_sans"/>
 
             <TextView
                 android:id="@+id/product_quantity"
@@ -68,10 +67,9 @@
                 android:layout_weight="1"
                 android:text="Product quantity"
                 android:padding="5dp"
-                android:textStyle="bold"
-                android:textSize="16sp"
+                android:textSize="15sp"
                 android:textColor="@color/black"
-                android:fontFamily="@font/roboto_slab"/>
+                android:fontFamily="@font/open_sans"/>
 
 
 
@@ -87,15 +85,14 @@
                     android:layout_weight="1"
                     android:text="Product Total Price"
                     android:padding="5dp"
-                    android:textStyle="bold"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/roboto_slab"/>
+                    android:textSize="15sp"
+                    android:fontFamily="@font/open_sans"/>
 
                 <ImageView
                     android:id="@+id/delete_current_product"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="5dp"

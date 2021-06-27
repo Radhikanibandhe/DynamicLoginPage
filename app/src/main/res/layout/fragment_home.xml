@@ -34,6 +34,7 @@
         android:drawableTint="@color/black"
         android:drawablePadding="10dp"
         android:padding="10dp"
+        android:fontFamily="@font/open_sans"
         android:background="@drawable/search_bg"
          />
 
@@ -50,7 +51,7 @@
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:fontFamily="@font/roboto_slab"
+          android:fontFamily="@font/open_sans"
           android:text="@string/popular_products"
           android:textColor="@color/black"
           android:textSize="18dp"
@@ -67,7 +68,7 @@
           android:layout_marginRight="7dp"
           android:textColor="@color/black"
           android:textStyle="bold"
-          android:fontFamily="@font/roboto_slab"
+          android:fontFamily="@font/open_sans"
           tools:ignore="InvalidId"
           android:layout_marginEnd="7dp" />
     </LinearLayout>
@@ -96,7 +97,7 @@
           android:textSize="18sp"
           android:textStyle="bold"
           android:textColor="@color/black"
-          android:fontFamily="@font/roboto_slab"/>
+          android:fontFamily="@font/open_sans"/>
 
       <TextView
           android:id="@+id/view_all_explore"
@@ -109,7 +110,7 @@
           android:layout_marginRight="7dp"
           android:textColor="@color/black"
           android:textStyle="bold"
-          android:fontFamily="@font/roboto_slab"
+          android:fontFamily="@font/open_sans"
           tools:ignore="InvalidId"
           android:layout_marginEnd="7dp" />
 
@@ -135,7 +136,7 @@
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:fontFamily="@font/roboto_slab"
+          android:fontFamily="@font/open_sans"
           android:textColor="@color/black"
           android:text="@string/recommended"
           android:textSize="18sp"
@@ -152,7 +153,7 @@
           android:layout_marginRight="7dp"
           android:textColor="@color/black"
           android:textStyle="bold"
-          android:fontFamily="@font/roboto_slab"
+          android:fontFamily="@font/open_sans"
           tools:ignore="InvalidId"
           android:layout_marginEnd="7dp" />
     </LinearLayout>

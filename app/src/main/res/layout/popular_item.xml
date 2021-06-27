@@ -27,10 +27,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/popular_products"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:fontFamily="@font/roboto_slab"/>
+            android:fontFamily="@font/open_sans"/>
 
         <TextView
             android:id="@+id/pop_des"
@@ -65,7 +65,7 @@
                 android:text="5.0"
                 android:layout_weight="1"
                 android:textColor="@color/black"
-                android:fontFamily="@font/roboto_slab"/>
+                android:fontFamily="@font/open_sans"/>
 
             <TextView
                 android:id="@+id/pop_discount"
@@ -78,7 +78,7 @@
                 android:textStyle="bold"
                 android:gravity="end"
                 android:textSize="12sp"
-                android:fontFamily="@font/roboto_slab"
+                android:fontFamily="@font/open_sans"
                 />
         </LinearLayout>
 
